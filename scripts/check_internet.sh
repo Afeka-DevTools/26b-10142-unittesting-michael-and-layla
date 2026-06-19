@@ -11,7 +11,7 @@ if [ $? -eq 0 ]; then
 else
     echo "Status: No internet connection."
 fi
-echo "-------------------------------------
+echo "-------------------------------------"
 
 
 
