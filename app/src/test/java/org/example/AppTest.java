@@ -76,6 +76,6 @@ class AppTest {
 
     @Test
     void testMostCommonWord() {
-        assertEquals("test", App.mostCommonWord("This is a test. A simple test!"));
+        assertEquals("test", App.mostCommonWord("This is a test. A simple test! This test is good."));
     }
 }
