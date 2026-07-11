@@ -18,3 +18,5 @@ We know the tests provide solid coverage because we explicitly targeted differen
 3. **Exception Handling:** We used `assertThrows` to ensure the code correctly rejects invalid inputs, covering the exception paths in the code (e.g., negative numbers in `factorial()` and `fibonacciUpTo()`, or empty arrays in `average()`).
 
 To mathematically prove 100% coverage, you can run the Gradle `test` task with a coverage tool like JaCoCo, which will generate an HTML report showing exactly which lines and branches were executed during the tests.
+
+NOTE: the original conversation was in hebrew but github isnt showing the text correctly in hebrew (we tried many methods to fix this)
