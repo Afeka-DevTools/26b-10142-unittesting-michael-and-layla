@@ -1,34 +1,35 @@
-**Purpose:** Self-learning conversation for HW2 Part 2
+**Purpose:** Self-learning conversation for HW2 Part 2.
 
 **User:**
-היי, אנחנו עושים עכשיו תרגיל בית ב Java עם Gradle וצריכים לכתוב בדיקות יחידה בעזרת JUnit עבור App.java.
-תסביר לי קצר ולעניין מה זה בכלל ולמה צריך את זה.
-כדי שיהיה לי נוח לקרוא, אני דורש שתענה בדיוק בפורמט של רשימה ממוספרת עם 3 נקודות קצרות.
+Hey, we are currently doing a Java homework assignment with Gradle and need to write JUnit unit tests for App.java. Explain briefly and to the point what this is and why it's needed.
+To make it easy to read, I require you to answer exactly in the format of a numbered list with 3 short points.
 
 **Gemini:**
-1. **מה זה:** קטעי קוד קטנים שבודקים פונקציה ספציפית במנותק משאר המערכת.
-2. **איך עובד:** מזינים קלט מוגדר מראש לפונקציה ומוודאים שהפלט הוא בדיוק מה שציפית לקבל.
-3. **למה צריך:** זה תופס באגים מיד כשאתה כותב אותם, ומוודא ששינויים חדשים לא ישברו את הקוד הישן.
+1. **What it is:** Small pieces of code that test a specific function (like a single method) in isolation from the rest of the system.
+2. **How it works:** You provide predefined input to the function and verify that the output is exactly what you expected.
+3. **Why it's needed:** It catches bugs immediately as you write them, and ensures that new changes you add in the future won't break old code.
 
 **User:**
-סבבה. ראיתי שצריך להשתמש בפונקציות שנקראות Asserts כדי לבדוק שהתוצאה אכן נכונה.
-תוכל לרכז לי את ה-4 הכי שימושיות? תעשה את זה בפורמט של טבלה מסודרת עם עמודה לשם הפונקציה ועמודה להסבר קצר.
+Cool. I saw that we need to use functions called Asserts to check that the result is correct. Can you summarize the 4 most useful ones for me?
+Do this in the format of a structured table with a column for the function name and a column for a short explanation.
 
 **Gemini:**
-בטח, הנה טבלה עם פונקציות ה Assert המרכזיות של JUnit:
+Sure, here is a table with the main JUnit Assert functions:
 
-| פונקציה | הסבר קצר |
+| Function | Short Explanation |
 | :--- | :--- |
-| assertEquals | מוודאת שהערך שקיבלת שווה לערך שציפית לו |
-| assertTrue | מוודאת שתנאי מסוים מחזיר אמת |
-| assertNull | מוודאת שהאובייקט המוחזר הוא ריק |
-| assertThrows | מוודאת שהפונקציה זורקת שגיאה במקרה של קלט שגוי |
+| `assertEquals` | Verifies that the value you received is equal to the expected value. |
+| `assertTrue` | Verifies that a specific condition returns true. |
+| `assertNull` | Verifies that the returned object is null. |
+| `assertThrows` | Verifies that the function throws a specific Exception in case of invalid input. |
 
 **User:**
-הבנתי. ולגבי מקרי קצה ונתיבים של הפונקציה - איך אני יודע שבדקתי מספיק?
-תסביר לי את זה תכלס, בפורמט של רשימה.
+Got it. And regarding Edge Cases and Code Coverage - how do I know I've tested enough and that my tests really cover everything?
+Explain this practically, in a bulleted list format.
 
 **Gemini:**
-* **כיסוי נתיבים:** צריך לוודא שהבדיקות גורמות לכל שורת קוד לרוץ. למשל, אם יש לך תנאי של if או else, אתה חייב לכתוב לפחות שני טסטים.
-* **מקרי קצה:** לבדוק תמיד מה קורה עם קלטים חריגים כמו 0, מספרים שליליים, מחרוזות ריקות או אובייקטים ריקים.
-* **כלים לעזרה:** כדאי להשתמש בכלים כמו JaCoCo בסביבת Gradle. הם מפיקים דוח שמראה באחוזים אילו נתיבים פספסת.
+* **Code Coverage:** Means you need to ensure the tests cause every line of code to run. For example, if you have an if/else condition, you must write at least two tests - one that enters the `if` and one that enters the `else`.
+* **Edge Cases:** Means always checking what happens with unusual or problematic inputs. You must check what happens when inserting 0, negative numbers, empty strings (""), or null objects.
+* **Helpful Tools:** It's recommended to use tools like JaCoCo in a Gradle environment. They can generate an automatic report highlighted in green and red, showing you exactly which paths you missed in percentages.
+
+NOTE: the original conversation was in hebrew but github isnt showing the text correctly in hebrew (we tried many methods to fix this)
