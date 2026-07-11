@@ -1,3 +1,24 @@
-בבקשה לא לבדוק את זה 
-זהו REPOSITORY ישן 
-יש אחד אחר בשם MICHAEL AND LAYLA
+# Java Unit Testing Project
+
+## Team Members
+* Michael
+* Layla
+
+## How to Run the Tests
+
+To run the unit tests on your local machine, please follow these steps:
+
+1. **Clone the repository:**
+   Open your terminal and clone the project using Git:
+   `git clone https://github.com/YOUR_GITHUB_USERNAME/26b-10142-unittesting-michael-and-layla.git`
+
+2. **Navigate to the project directory:**
+   `cd 26b-10142-unittesting-michael-and-layla`
+
+3. **Run the tests using Gradle:**
+   Execute the following command in your terminal to run all JUnit tests:
+   `./gradlew test`
+
+4. **View the Test Report:**
+   Once the tests finish executing, Gradle generates a detailed HTML report. You can view the results by opening the following file in your web browser:
+   `app/build/reports/tests/test/index.html`
